@@ -1,4 +1,4 @@
-from flask import Flask,redirect
+from flask import Flask,redirect,url_for
 app = Flask(__name__)
 
 @app.route("/")
@@ -57,3 +57,17 @@ def menu():
         </footer>
     </body>
     </html>"""
+
+@app.route("/lab1/oak")
+def oak():
+    return '''
+    <!doctype html>
+    <header>'''+ url_for('static',filename='lab1.css') +'''</header>
+    <html>
+        <body>
+            <h1>Дуб</h1>
+            <img src="''' + url_for('static',filename='oak.jpg') + '''">
+        </body>
+    </html>
+    '''  
+    # ДОДЕЛАТЬ CSS
