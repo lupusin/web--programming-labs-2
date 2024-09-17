@@ -1,0 +1,24 @@
+
+body {
+    background-color: #87acf1; 
+    color: #333; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+img {
+    max-width: 50%; /* Ограничение ширины картинки */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    display: block; /* Центрирование */
+    margin: 0 auto; /* Центрирование картинки */
+    border: 4px solid #05a88d; /* Обводка вокруг картинки */
+    border-radius: 10px; /* Закругление углов */
+}
+h1{
+    margin: 10px;
+    text-align: center
+}
+h3{
+    text-align: center;
+}

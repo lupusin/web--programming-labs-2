@@ -62,12 +62,20 @@ def menu():
 def oak():
     return '''
     <!doctype html>
-    <header>'''+ url_for('static',filename='lab1.css') +'''</header>
+    <link rel="stylesheet" href="'''+ url_for('static', filename='lab1.css')+ '''">
+    <header>
+    </header>
     <html>
         <body>
             <h1>Дуб</h1>
+            <div>
+            <h3>На краю дороги стоял старый одинокий дуб.
+             Крепко стоял, надёжно. Не страшны ему были ни сильные порывы ветра, ни хлёсткие ливни, ни вьюжные метели.
+             </h3>
+            </div>
+            <div>
             <img src="''' + url_for('static',filename='oak.jpg') + '''">
+            </div>
         </body>
     </html>
     '''  
-    # ДОДЕЛАТЬ CSS
