@@ -198,4 +198,6 @@ def film():
 @app.route("/lab2/example")
 def example():
     name='Егор Лапшин'
-    return render_template('example.html',name=name)
+    gropu='ФБИ-23'
+    kyrc='3'
+    return render_template('example.html',name=name,group=group,kyrc=kyrc)
