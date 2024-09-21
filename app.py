@@ -200,4 +200,5 @@ def example():
     name='Егор Лапшин'
     group='ФБИ-23'
     kyrc='3'
-    return render_template('example.html',name=name,group=group,kyrc=kyrc)
+    number=2
+    return render_template('example.html',group=group,kyrc=kyrc,number=number,name=name)
