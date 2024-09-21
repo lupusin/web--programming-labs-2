@@ -197,5 +197,5 @@ def film():
 
 @app.route("/lab2/example")
 def example():
-    return render_template('example.html')
-    
+    name='Егор Лапшин'
+    return render_template('example.html',name=name)
