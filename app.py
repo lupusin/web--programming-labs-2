@@ -201,4 +201,10 @@ def example():
     group='ФБИ-23'
     kyrc='3'
     number=2
-    return render_template('example.html',group=group,kyrc=kyrc,number=number,name=name)
+    fruits = [
+        {'name':'яблоки','price':100},
+        {'name':'груши','price':120},
+        {'name':'апельсины','price':80},
+        {'name':'мандарины','price':95},
+        {'name':'манго','price':32}]
+    return render_template('example.html',group=group,kyrc=kyrc,number=number,name=name,fruits=fruits)
