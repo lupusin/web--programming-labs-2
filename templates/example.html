@@ -18,6 +18,10 @@
         {% for f in fruits%}
             <li>{{ f.name}}:{{ f.price }} &#x20bd</li>
         {% endfor %}
+        <h1>Книги</h1>
+        {% for b in books %}
+            <li>{{ b.name }}:{{b.author}}:{{b.janr}}:{{b.kolvo}}</li>
+        {% endfor %}
     </main>
     <footer>
         &copy;
