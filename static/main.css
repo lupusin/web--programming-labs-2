@@ -37,3 +37,7 @@ div.cars{
     align-items: center;
     display: grid;
 }
+a.menu{
+    text-align: left;
+    color: red;
+}
