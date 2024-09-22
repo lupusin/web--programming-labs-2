@@ -220,3 +220,7 @@ def example():
         {'name':'Граф Монте-Кристо','author':'Александр Дюма','janr':'Исторические приключения','kolvo':'1500'}
     ]
     return render_template('example.html',group=group,kyrc=kyrc,number=number,name=name,fruits=fruits,books=books)
+
+@app.route('/lab2/')
+def lab2():
+    return render_template('lab2.html')
