@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block lab %}Лабароторная работа 2 {% endblock %}
+{% block main %}
+    <h1>Модели Mercedes Benz</h1>
+    <div class="cars">
+        <h2>CLA SHOOTING BRAKE</h2>
+        <p>Кузов Shooting Brake представляет собой универсал с большим наклоном задней стойки.
+            — Наиболее вместительное багажное отделение среди модификаций, построенных на платформе модели A-Class. Его объём составляет 495 л.</p>
+        <img class="cars" src="{{ url_for('static',filename='cla.png') }}">
+    </div>
+    <div class="cars">
+        <h2>C-CLASS 180</h2>
+        <p>Mercedes-Benz W205 — четвёртое поколение компактных престижных автомобилей C-класса немецкого автопроизводителя Mercedes-Benz, выпускающееся с 4 февраля 2014 года. 
+        </p>
+        <img class="cars" src="{{ url_for('static',filename='c_class.jpg') }}">
+    </div>
+    <div class="cars">
+        <h2>E-CLASS W212</h2>
+        <p>Mercedes-Benz W212 — четвёртое поколение легковых автомобилей E-класса немецкой торговой марки Mercedes-Benz, представленное в 2009 году на Детройтском автосалоне. 
+        </p>
+        <img class="cars" src="{{ url_for('static',filename='e_class.jpg') }}">
+    </div>
+    <div class="cars">
+        <h2>GLK-CLASS</h2>
+        <p>Mercedes-Benz GLK-класс — серия люксовых компактных кроссоверов немецкой торговой марки Mercedes-Benz, основанная на универсале S204 C-класса.
+        </p>
+        <img class="cars" src="{{ url_for('static',filename='glk.jpeg') }}">
+    </div>
+    <div class="cars">
+    <h2>SLK-CLASS</h2>
+    <p>Mercedes-Benz SLK-класс — серия компактных родстеров класса люкс немецкой автомобильной марки Mercedes-Benz.
+    </p>
+    <img class="cars" src="{{ url_for('static',filename='slk.jpg') }}">
+    </div>
+
+{% endblock %}  

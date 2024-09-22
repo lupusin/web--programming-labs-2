@@ -27,3 +27,13 @@ footer {
 body{
     background: lightseagreen;
 }
+img.cars{
+    text-align: center;
+    width: 700px;
+    height: auto;
+}
+
+div.cars{
+    align-items: center;
+    display: grid;
+}
