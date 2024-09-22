@@ -8,7 +8,7 @@ def start():
 @app.route("/lab1")
 def lab1():
     return """
-    <!doctype html?
+    <!doctype html>
     <html>
         <head>
             <title>Лапшин Егор Вячеславович, Лабороторная 1 </title>
@@ -41,7 +41,7 @@ def lab1():
 @app.route("/menu")
 def menu():
     return '''
-    <!doctype html?
+    <!doctype html>
     <link rel="stylesheet" href="'''+ url_for('static', filename='lab1.css')+ '''">
     <html>
         <head>
@@ -49,7 +49,7 @@ def menu():
         </head>
     <body>
         <header>
-            НГТУ, ФБ, Лаборотрная работа 1
+            НГТУ, ФБ, Лабороторная работа 1
         </header>
 
         <h1>НГТУ,ФБ, WEB-программирование, часть 2. Список лабораторных</h1>
