@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Железнодорожный билет</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        form { margin: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>Форма заказа железнодорожного билета</h1>
+
+<form action="/lab3/calculate" method="POST">
+    <label for="fio">ФИО пассажира:</label><br>
+    <input type="text" name="fio" required><br><br>
+
+    <label for="shelf">Полка:</label><br>
+    <select name="shelf" required>
+        <option value="">Выберите полку</option>
+        <option value="lower">Нижняя</option>
+        <option value="upper">Верхняя</option>
+        <option value="upper_side">Верхняя боковая</option>
+        <option value="lower_side">Нижняя боковая</option>
+    </select><br><br>
+
+    <label for="bedding">С бельём:</label><br>
+    <input type="checkbox" name="bedding"><br><br>
+
+    <label for="luggage">С багажом:</label><br>
+    <input type="checkbox" name="luggage"><br><br>
+
+    <label for="age">Возраст:</label><br>
+    <input type="number" name="age" required min="1" max="120"><br><br>
+
+    <label for="departure">Пункт выезда:</label><br>
+    <input type="text" name="departure" required><br><br>
+
+    <label for="destination">Пункт назначения:</label><br>
+    <input type="text" name="destination" required><br><br>
+
+    <label for="date">Дата поездки:</label><br>
+    <input type="date" name="date" required><br><br>
+
+    <label for="insurance">Нужна ли страховка:</label><br>
+    <input type="checkbox" name="insurance"><br><br>
+
+    <button type="submit">Заказать билет</button>
+</form>
+
+</body>
+</html>
