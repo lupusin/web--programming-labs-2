@@ -53,7 +53,7 @@ def oak():
              </h3>
             </div>
             <div>
-            <img src="''' + url_for('static',filename='oak.jpg') + '''">
+            <img src="''' + url_for('static',filename='lab1/oak.jpg') + '''">
             </div>
         </body>
     </html>
@@ -74,7 +74,7 @@ def student():
 
         <h1>Лапшин Егор Вячеславович</h1>
         <div>
-        <img src="''' + url_for('static',filename='mda.png') + '''">
+        <img src="''' + url_for('static',filename='lab1/mda.png') + '''">
         </div>
         <footer>
             &copy; Егор Лапшин , ФБИ-23, 3 курс, 2024
@@ -116,7 +116,7 @@ def python():
     <h2>История разработки</h2>
     <p>Разработка языка ведётся через предложения по расширению языка PEP (англ. Python Enhancement Proposal), в которых описываются нововведения, делаются корректировки согласно обратной связи от сообщества и документируются итоговые решения. Срок поддержки версии Python 2 закончился в 2020 году. На текущий момент активно развивается версия языка Python 3.</p>
 
-        <img src="''' + url_for('static',filename='python.jpg') + '''">
+        <img src="''' + url_for('static',filename='lab1/python.jpg') + '''">
         </div>
         <footer>
             &copy; Егор Лапшин , ФБИ-23, 3 курс, 2024
@@ -161,7 +161,7 @@ def film():
     <h2>Отзывы и критика</h2>
     <p>Ученые Остин высказали мнение, что работа Райта создала новый гибридный жанр, смешав традиционные черты фильма о наследии с "техниками кинопроизводства, ориентированными на молодежь".</p>
 
-        <img src="''' + url_for('static',filename='film.png') + '''">
+        <img src="''' + url_for('static',filename='lab1/film.png') + '''">
         </div>
         <footer>
             &copy; Егор Лапшин , ФБИ-23, 3 курс, 2024

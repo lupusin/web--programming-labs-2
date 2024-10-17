@@ -31,9 +31,9 @@ def example():
 
 @lab2.route('/lab2/')
 def labb():
-    return render_template('lab2.html')
+    return render_template('lab2/lab2.html')
 
 
 @lab2.route('/lab2/cars')
 def cars():
-    return render_template('cars.html')
+    return render_template('lab2/cars.html')
