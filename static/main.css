@@ -41,3 +41,7 @@ a.menu{
     text-align: left;
     color: red;
 }
+
+.errors{
+    color: red;
+}
