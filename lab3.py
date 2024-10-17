@@ -33,7 +33,38 @@ def form1():
     if user=="":
         errors['user'] = 'Заполните поле!'
     age =request.args.get('age')
-    if age=="" or age<0:
+    if age=="":
         errors['user'] = 'Заполните поле!'
     sex = request.args.get('sex')
     return render_template('lab3/form1.html',user=user,age=age,sex=sex, errors=errors)
+
+
+@lab3.route('/lab3/order')
+def order():
+    return render_template('lab3/orders.html')
+
+@lab3.route('/lab3/pay')
+def pay():
+    global price
+    price=0
+    drink = request.args.get('drink')
+    if drink== 'cofee':
+        price=120
+    elif drink== 'black-tea':
+        price = 80
+    else:
+        price=70
+    if request.args.get('milk')=='on':
+        price+=30
+    else:
+        pass
+    if request.args.get('sugar')=='on':
+        price+=10
+    else:
+        pass
+    return render_template('lab3/pay.html',price=price)
+
+@lab3.route('/lab3/success')
+def success():
+    global price
+    return render_template('lab3/success.html',price=price)
