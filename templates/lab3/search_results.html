@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <title>Результаты поиска</title>
+</head>
+<body>
+
+<h1>Результаты поиска</h1>
+
+{% if books %}
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} - {{ book.price }} руб, Автор: {{ book.author }}, Жанр: {{ book.genre }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет книг в заданном диапазоне цен.</p>
+    {% endif %}
+    
+    <a href="/lab3/search_form">Назад к поиску</a>
+    
+    </body>
+    </html>
+    

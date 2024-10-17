@@ -133,3 +133,44 @@ def calculate():
 
     return render_template('lab3/ticket.html', ticket=ticket_info)
 
+
+books = [
+    {"title": "Мастер и Маргарита", "price": 500, "author": "Михаил Булгаков", "genre": "Роман"},
+    {"title": "1984", "price": 750, "author": "Джордж Оруэлл", "genre": "Фантастика"},
+    {"title": "Преступление и наказание", "price": 1200, "author": "Федор Достоевский", "genre": "Роман"},
+    {"title": "Война и мир", "price": 1500, "author": "Лев Толстой", "genre": "Исторический роман"},
+    {"title": "Трудно быть богом", "price": 600, "author": "Аркадий и Борис Стругацкие", "genre": "Научная фантастика"},
+    {"title": "Собачье сердце", "price": 400, "author": "Михаил Булгаков", "genre": "Проза"},
+    {"title": "451 градус по Фаренгейту", "price": 800, "author": "Рэй Брэдбери", "genre": "Фантастика"},
+    {"title": "Гарри Поттер и философский камень", "price": 900, "author": "Дж.К. Роулинг", "genre": "Фэнтези"},
+    {"title": "Анна Каренина", "price": 1500, "author": "Лев Толстой", "genre": "Роман"},
+    {"title": "Шум и ярость", "price": 1200, "author": "Уильям Фолкнер", "genre": "Роман"},
+    {"title": "Убить пересмешника", "price": 600, "author": "Харпер Ли", "genre": "Роман"},
+    {"title": "Девочка с пилами", "price": 350, "author": "Рей Бредбери", "genre": "Фантастика"},
+    {"title": "Принцесса Монако", "price": 900, "author": "Моника Мерчези", "genre": "Роман"},
+    {"title": "Дюна", "price": 1300, "author": "Фрэнк Герберт", "genre": "Научная фантастика"},
+    {"title": "Степной волк", "price": 700, "author": "Герман Гессе", "genre": "Роман"},
+    {"title": "В поисках утра", "price": 850, "author": "Николай Гоголь", "genre": "Проза"},
+    {"title": "История одного города", "price": 400, "author": "Михаил Салтыков-Щедрин", "genre": "Сатира"},
+    {"title": "Гордость и предубеждение", "price": 550, "author": "Джейн Остин", "genre": "Роман"},
+    {"title": "Цветы для Элджернона", "price": 700, "author": "Дэниел Киз", "genre": "Научная фантастика"},
+    {"title": "Крысолов", "price": 800, "author": "Фрэнсис Бёрнетт", "genre": "Проза"},
+    {"title": "Сияние", "price": 950, "author": "Стивен Кинг", "genre": "Ужасы"},
+]
+
+@lab3.route('/lab3/search_form')
+def search_form():
+    return render_template('lab3/search_form.html')
+
+@lab3.route('/lab3/results', methods=['POST'])
+def search_results():
+    min_price = request.form['min_price']
+    max_price = request.form['max_price']
+
+    # Фильтруем книги по ценам
+    filtered_books = [
+        book for book in books
+        if (int(min_price) <= book['price'] <= int(max_price))
+    ]
+
+    return render_template('lab3/search_results.html', books=filtered_books)

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <title>Поиск книг</title>
+</head>
+<body>
+
+<h1>Поиск книг по цене</h1>
+
+<form action="/lab3/results" method="POST">
+    <label for="min_price">Минимальная цена:</label>
+    <input type="number" name="min_price" required><br><br>
+
+    <label for="max_price">Максимальная цена:</label>
+    <input type="number" name="max_price" required><br><br>
+
+    <button type="submit">Искать</button>
+</form>
+
+</body>
+</html>
