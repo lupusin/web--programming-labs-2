@@ -5,9 +5,10 @@ from lab2 import lab2
 from lab3 import lab3
 from lab4 import lab4
 from lab5 import lab5
+from dotenv import load_dotenv
 
 app = Flask(__name__)
-load_dotenv()
+
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY','cекрет')
 app.config['DB_TYPE'] = os.getenv('DB_TYPE','postgres')
 

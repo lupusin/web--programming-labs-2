@@ -7,7 +7,7 @@ from os import path
 from dotenv import load_dotenv
 lab5 = Blueprint('lab5',__name__)
 
-load_dotenv()
+
 @lab5.route('/lab5/')
 def lab():
     login= 'Гость'
