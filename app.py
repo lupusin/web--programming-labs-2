@@ -5,6 +5,7 @@ from lab2 import lab2
 from lab3 import lab3
 from lab4 import lab4
 from lab5 import lab5
+from lab6 import lab6
 from dotenv import load_dotenv
 
 app = Flask(__name__)
@@ -17,6 +18,7 @@ app.register_blueprint(lab2)
 app.register_blueprint(lab3)
 app.register_blueprint(lab4)
 app.register_blueprint(lab5)
+app.register_blueprint(lab6)
 @app.route("/")
 @app.route("/index")
 def start():
@@ -45,6 +47,7 @@ def menu():
         <li><a href="/lab3">Лабораторная 3</a></li>
         <li><a href="/lab4">Лабораторная 4</a></li>
         <li><a href="/lab5">Лабораторная 5</a></li>
+        <li><a href="/lab6">Лабораторная 6</a></li>
         </div>
         <footer>
             &copy; Егор Лапшин , ФБИ-23, 3 курс, 2024
