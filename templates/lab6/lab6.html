@@ -1,7 +1,8 @@
+
+
 {% extends "base.html" %}
 
 {% block lab %}Лабораторная работа 6{% endblock %}
-
 
 {% block script %}
 <script>
@@ -29,7 +30,7 @@ function getOfficeList() {
         for(let i = 0; i < office_list.length; i++){
             const office = office_list[i];
             const li = document.createElement('li');
-            li.innerText = `${office.number}: ${office.tenant || 'свободен'}, стоимость аренды: ${office.price} руб.`;
+            li.innerText = `${office.number}: ${office.tenant || 'свободен'}, стоимость аренды: ${office.rent_cost} руб.`;
 
             const bookingButton = document.createElement('button');
             bookingButton.innerText = 'зарезервировать';
@@ -47,7 +48,7 @@ function getOfficeList() {
 
             // Считаем общую стоимость арендованных офисов
             if (office.tenant) {
-                totalRentCost += office.price;
+                totalRentCost += office.rent_cost;
             }
         }
 
@@ -141,68 +142,68 @@ document.addEventListener('DOMContentLoaded', function(){
 {% block main %}
 <style>
     body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
+    h1 {
+        text-align: center;
+        color: #333;
+    }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    width: 80%;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    ul {
+        list-style-type: none;
+        padding: 0;
+        width: 80%;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-li {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    li {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-li:last-child {
-    border-bottom: none;
-}
+    li:last-child {
+        border-bottom: none;
+    }
 
-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
 
-button:hover {
-    background-color: #ddd;
-}
+    button:hover {
+        background-color: #ddd;
+    }
 
-button.booking {
-    background-color: #4CAF50;
-    color: white;
-}
+    button.booking {
+        background-color: #4CAF50;
+        color: white;
+    }
 
-button.cancellation {
-    background-color: #f44336;
-    color: white;
-}
+    button.cancellation {
+        background-color: #f44336;
+        color: white;
+    }
 
-p#total-rent-cost {
-    text-align: center;
-    font-size: 18px;
-    color: #333;
-    margin-top: 20px;
-}
+    p#total-rent-cost {
+        text-align: center;
+        font-size: 18px;
+        color: #333;
+        margin-top: 20px;
+    }
 </style>
     <h1>Список кабинетов</h1>
     <ul id="office-list"></ul>
