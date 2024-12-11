@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template,request, redirect, session
+from flask import Blueprint,render_template,request, redirect, session,abort
 lab7 = Blueprint('lab7',__name__)
 
 @lab7.route('/lab7/')
@@ -34,14 +34,18 @@ films = [
 
 @lab7.route('/lab7/rest-api/films/<int:id>',methods=['GET'])
 def get_film(id):
-    if films[id] in films:
+    if id <= (len(films)-1):
         return films[id]
     else:
-        return {
-            'jsonrpc': '2.0',
-            'error': {
-                'code': 6,
-                'message': 'INDEX OUT OF RANGE'
-            },
-            'id': id
-        }
+       
+
+
+@lab7.route('/lab7/rest-api/films/<int:id>',methods=['DELETE'])
+def del_film(id):
+    if id <= (len(films)-1):
+        del films[id]
+        return '',204
+    else:
+        return {"error": "Film not found"}, 404
+
+
