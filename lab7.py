@@ -32,12 +32,16 @@ films = [
     },
 ]
 
+@lab7.route('/lab7/rest-api/films/',methods=['GET'])
+def get_films():
+    return films
+
 @lab7.route('/lab7/rest-api/films/<int:id>',methods=['GET'])
 def get_film(id):
     if id <= (len(films)-1):
-        return films[id]
+        return films[id]    
     else:
-       
+        return {"error": "Film not found"}, 404
 
 
 @lab7.route('/lab7/rest-api/films/<int:id>',methods=['DELETE'])
