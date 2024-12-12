@@ -49,8 +49,13 @@ function deleteFilm(id,title){
             fillFilmList();
         });
 }
-function showModal(){
+function showModal() {
     document.querySelector('div.modal').style.display = 'block';
+    // Очистка сообщений об ошибках
+    document.getElementById('title-error').innerText = '';
+    document.getElementById('title_ru-error').innerText = '';
+    document.getElementById('year-error').innerText = '';
+    document.getElementById('description-error').innerText = '';
 }
 function hideModal(){
     document.querySelector('div.modal').style.display = 'none';
@@ -84,9 +89,17 @@ function sendFilm(){
         headers:{"Content-Type":"application/json"},
         body: JSON.stringify(film)
     })
-    .then(function(){
-        fillFilmList();
-        hideModal();
+
+    .then(function(resp){
+        if(resp.ok){
+            fillFilmList();
+            hideModal();
+        }
+        return resp.json();
+    })
+    .then(function(errors){
+        if(errors.description)
+            document.getElementById('description-error').innerText = errors.description;
     });
 }
 
