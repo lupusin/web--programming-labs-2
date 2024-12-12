@@ -65,11 +65,11 @@ function cancel(){
     hideModal();
 }
 function addFilm(){
-    document.getElementById('id').value = '';
-    document.getElementById('title').value = '';
-    document.getElementById('title-ru').value = '';
-    document.getElementById('year').value = '';
-    document.getElementById('description').value = '';
+    // document.getElementById('id').value = '';
+    // document.getElementById('title').value = '';
+    // document.getElementById('title-ru').value = '';
+    // document.getElementById('year').value = '';
+    // document.getElementById('description').value = '';
     showModal();
 }
 function sendFilm(){
